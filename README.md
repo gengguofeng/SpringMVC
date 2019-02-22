@@ -23,4 +23,19 @@ mvc_v003:优化页面参数传递,例如：
      public void getUser(User user,HttpServletRequest req){...}
     
    等等
+   
+   
+   
+   
+mvc_v004:增加视图层，例如
+
+    @RequestMapped("/run1")
+    public String  getUser1(User user, Model model){
+        
+        model.setAttribute("message","hello!!");
+        model.setAttribute("name","gengguofeng");
+        return "info";
+    }
+    
+    info.jsp中通过${name}，${message}获取数据
  
